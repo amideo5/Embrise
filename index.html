@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,4 +11,66 @@
   <body>
     <div id="root"></div>
   </body>
+</html>
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes spin-slow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-amber-50 to-amber-100">
+
+  <div class="min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="flex justify-center mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 text-amber-500 animate-spin-slow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <circle cx="12" cy="12" r="10" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></circle>
+        </svg>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold text-amber-900 mb-6">
+        Coming Soon
+      </h1>
+      <p class="text-xl text-amber-800 mb-12">
+        We're working on something amazing. Our new feature will be available soon.
+      </p>
+      <div class="space-y-4">
+        <div class="flex flex-col items-center space-y-2">
+          <p class="text-amber-700 font-medium">Want to be notified when we launch?</p>
+          <div class="flex w-full max-w-md">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="flex-1 px-4 py-2 rounded-l-lg border-2 border-amber-200 focus:border-amber-400 focus:outline-none"
+            />
+            <button class="bg-amber-600 hover:bg-amber-500 text-white px-6 py-2 rounded-r-lg transition-colors duration-300 flex items-center">
+              Notify Me
+              <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12l-6 6m0 0l-6-6m6 6V6"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="pt-8">
+          <a href="/" class="text-amber-600 hover:text-amber-500 font-medium flex items-center justify-center">
+            Return to Homepage
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12l-6 6m0 0l-6-6m6 6V6"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
 </html>
