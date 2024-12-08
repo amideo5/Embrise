@@ -1,56 +1,63 @@
 import React from 'react';
-import { Database, Network, Brain, BarChart, Cloud, Lock } from 'lucide-react';
+import { ServiceCard } from './ServiceCard';
+import { Code, Palette, Globe, Database, Smartphone, Cpu } from 'lucide-react';
+
+const services = [
+  {
+    icon: Code,
+    title: 'Custom Development',
+    description: 'Tailored software solutions built with cutting-edge technologies',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400'
+  },
+  {
+    icon: Globe,
+    title: 'Web Applications',
+    description: 'Responsive and scalable web applications that deliver results',
+    image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=400'
+  },
+  {
+    icon: Database,
+    title: 'Backend Systems',
+    description: 'Robust and secure backend infrastructure for your applications',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=400'
+  },
+  {
+    icon: Smartphone,
+    title: 'Mobile Solutions',
+    description: 'Native and cross-platform mobile applications',
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=400'
+  },
+  {
+    icon: Palette,
+    title: 'UI/UX Design',
+    description: 'Beautiful and intuitive user interfaces that engage',
+    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=400'
+  },
+  {
+    icon: Cpu,
+    title: 'AI Integration',
+    description: 'Seamless integration with third-party services and AIs',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=400'
+  }
+];
 
 export function Services() {
   return (
-    <div className="bg-amber-50 py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-amber-900 text-center mb-16">Our Services</h2>
+    <section id="services" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl font-bold text-amber-900 mb-4">Our Services</h2>
+          <p className="text-amber-700 max-w-2xl mx-auto">
+            Comprehensive solutions to help your business thrive in the digital landscape
+          </p>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ServiceCard
-            icon={<Database />}
-            title="Data Solutions"
-            description="Comprehensive data management and analytics solutions tailored to your business needs."
-          />
-          <ServiceCard
-            icon={<Network />}
-            title="Network Infrastructure"
-            description="Robust and scalable network solutions ensuring seamless connectivity."
-          />
-          <ServiceCard
-            icon={<Brain />}
-            title="AI & ML Analysis"
-            description="Advanced artificial intelligence and machine learning solutions for data-driven insights."
-          />
-          <ServiceCard
-            icon={<BarChart />}
-            title="Business Intelligence"
-            description="Transform raw data into actionable insights for informed decision-making."
-          />
-          <ServiceCard
-            icon={<Cloud />}
-            title="Cloud Services"
-            description="Secure and flexible cloud solutions for modern business requirements."
-          />
-          <ServiceCard
-            icon={<Lock />}
-            title="Cybersecurity"
-            description="Comprehensive security solutions to protect your valuable data and systems."
-          />
+          {services.map((service, index) => (
+            <ServiceCard key={index} {...service} index={index} />
+          ))}
         </div>
       </div>
-    </div>
-  );
-}
-
-function ServiceCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
-  return (
-    <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-      <div className="text-amber-600 w-12 h-12 mb-4">
-        {icon}
-      </div>
-      <h3 className="text-xl font-semibold text-amber-900 mb-4">{title}</h3>
-      <p className="text-amber-700">{description}</p>
-    </div>
+    </section>
   );
 }

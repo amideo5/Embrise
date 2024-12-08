@@ -1,81 +1,99 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Sun, Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Code2, Menu, X } from 'lucide-react';
 
 export function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/services', label: 'Services' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/about', label: 'About' },
-    { path: '/contact', label: 'Contact' },
-  ];
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false);
+    }
+  };
 
   return (
-    <nav className="fixed w-full bg-amber-900/90 backdrop-blur-sm z-50">
-      <div className="container mx-auto px-4">
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-white' : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <Sun className="w-8 h-8 text-amber-400" />
-            <span className="text-amber-50 font-bold text-xl">Embrise</span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <NavLink 
-                key={link.path} 
-                to={link.path} 
-                active={location.pathname === link.path}
-              >
-                {link.label}
-              </NavLink>
-            ))}
+          <div className="flex items-center space-x-2">
+            <Code2 className="w-8 h-8 text-amber-700" />
+            <span className="text-xl font-semibold text-amber-900">Embrise</span>
           </div>
 
-          {/* Mobile Menu Button */}
+          <div className="hidden md:flex items-center space-x-8">
+            <button onClick={() => scrollToSection('services')} className="text-amber-900 hover:text-amber-700 transition-colors">
+              Services
+            </button>
+            <button onClick={() => scrollToSection('work')} className="text-amber-900 hover:text-amber-700 transition-colors">
+              Our Work
+            </button>
+            <button onClick={() => scrollToSection('about')} className="text-amber-900 hover:text-amber-700 transition-colors">
+              About
+            </button>
+            <button onClick={() => scrollToSection('contact')} className="text-amber-900 hover:text-amber-700 transition-colors">
+              Contact
+            </button>
+            <button onClick={() => scrollToSection('contact')} className="bg-amber-800 text-white px-6 py-2 rounded-full hover:bg-amber-900 transition-colors">
+              Get Started
+            </button>
+          </div>
+
           <button 
-            className="md:hidden text-amber-50"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMenuOpen ? <X /> : <Menu />}
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6 text-amber-900" />
+            ) : (
+              <Menu className="w-6 h-6 text-amber-900" />
+            )}
           </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="block px-3 py-2 text-amber-50 hover:text-amber-300 transition-colors duration-300"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
-    </nav>
-  );
-}
 
-function NavLink({ to, active, children }: { to: string; active: boolean; children: React.ReactNode }) {
-  return (
-    <Link
-      to={to}
-      className={`text-amber-50 hover:text-amber-300 transition-colors duration-300 ${
-        active ? 'border-b-2 border-amber-400' : ''
-      }`}
-    >
-      {children}
-    </Link>
+      {/* Mobile menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white border-t">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            <button
+              onClick={() => scrollToSection('services')}
+              className="block w-full text-left px-3 py-2 text-amber-900 hover:bg-amber-50 rounded-md"
+            >
+              Services
+            </button>
+            <button
+              onClick={() => scrollToSection('work')}
+              className="block w-full text-left px-3 py-2 text-amber-900 hover:bg-amber-50 rounded-md"
+            >
+              Our Work
+            </button>
+            <button
+              onClick={() => scrollToSection('about')}
+              className="block w-full text-left px-3 py-2 text-amber-900 hover:bg-amber-50 rounded-md"
+            >
+              About
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="block w-full text-left px-3 py-2 text-amber-900 hover:bg-amber-50 rounded-md"
+            >
+              Contact
+            </button>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 }

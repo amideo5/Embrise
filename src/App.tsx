@@ -1,44 +1,43 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { HomePage } from './pages/HomePage';
-import { ServicesPage } from './pages/ServicesPage';
-import { AboutPage } from './pages/AboutPage';
-import { ContactPage } from './pages/ContactPage';
-import { ProjectsPage } from './pages/ProjectsPage';
 import { Footer } from './components/Footer';
-import { ThemeProvider } from './context/ThemeContext';
-import { useTheme } from './context/ThemeContext';
-
-function AppContent() {
-  const { theme } = useTheme();
-  
-  return (
-    <div className={`min-h-screen ${
-      theme === 'day' ? 'bg-amber-50' : 'bg-gray-900'
-    } flex flex-col`}>
-      <Navbar />
-      <main className="flex-grow">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
-  );
-}
+import { Hero } from './components/Hero';
+import { Services } from './components/Services';
+import { About } from './components/About';
+import { Portfolio } from './components/Portfolio';
+import { Contact } from './components/Contact';
+import { SectionDivider } from './components/SectionDivider';
+import './styles/animations.css';
+import { Timeline } from './components/Timeline';
 
 function App() {
   return (
-    <Router>
-      <ThemeProvider>
-        <AppContent />
-      </ThemeProvider>
-    </Router>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-grow">
+        <Hero />
+        <div className="flex">
+          <Timeline />
+        </div>
+        <div className="relative">
+          {/* <SectionDivider className="text-amber-50" variant="curve" /> */}
+          <Services />
+        </div>
+        <div className="relative">
+          <SectionDivider className="text-amber-50" variant="curve" />
+          <Portfolio />
+        </div>
+        <div className="relative">
+          {/* <SectionDivider className="text-amber-50" variant="curve" /> */}
+          <About />
+        </div>
+        <div className="relative">
+          {/* <SectionDivider className="text-amber-50" variant="curve" flip /> */}
+          <Contact />
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
