@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { LucideIcon } from 'lucide-react';
 
 interface ServiceCardProps {
@@ -7,9 +8,10 @@ interface ServiceCardProps {
   description: string;
   image: string;
   index: number;
+  link: string;
 }
 
-export function ServiceCard({ icon: Icon, title, description, image, index }: ServiceCardProps) {
+export function ServiceCard({ icon: Icon, title, description, image, index, link }: ServiceCardProps) {
   return (
     <div
       className="group relative overflow-hidden rounded-xl bg-white hover:animate-float animate-fade-in"
@@ -32,9 +34,12 @@ export function ServiceCard({ icon: Icon, title, description, image, index }: Se
           </p>
         </div>
         <div className="transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-          <button className="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-400 transition-colors animate-glow">
+          <Link 
+            to={link} 
+            className="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-400 transition-colors animate-glow"
+          >
             Learn More
-          </button>
+          </Link>
         </div>
       </div>
     </div>

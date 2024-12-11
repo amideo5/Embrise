@@ -1,11 +1,27 @@
 import React from 'react';
-import { Code2, Mail, MapPin} from 'lucide-react';
+import { Mail, MapPin} from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
+
 
 export function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+        // setIsMobileMenuOpen(false);
+      }, 300); // Adjust timeout as needed for route change animation
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      // setIsMobileMenuOpen(false);
     }
   };
 
@@ -16,8 +32,7 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Code2 className="w-6 h-6" />
-              <span className="text-xl font-semibold">Embrise</span>
+            <img src="../src/assets/embrise_logo.png" alt="Embrise Logo" className="h-12 w-auto" />
             </div>
             <p className="text-amber-200/80">
               Transforming ideas into exceptional digital experiences through innovative technology solutions.
@@ -49,7 +64,7 @@ export function Footer() {
                   onClick={() => scrollToSection('work')}
                   className="hover:text-amber-300 transition-colors"
                 >
-                  Portfolio
+                  Our Work
                 </button>
               </li>
               <li>
@@ -69,22 +84,26 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <button className="hover:text-amber-300 transition-colors">
-                  Web Development
+                  <a href='/webDevelopment'>
+                  Web Development</a>
                 </button>
               </li>
               <li>
                 <button className="hover:text-amber-300 transition-colors">
-                  Mobile Apps
+                <a href='/mobileDevelopment'>
+                  Mobile Apps</a>
                 </button>
               </li>
               <li>
                 <button className="hover:text-amber-300 transition-colors">
-                  AI & ML Solutions
+                <a href='/aiIntegration'>
+                  AI & ML Solutions</a>
                 </button>
               </li>
               <li>
                 <button className="hover:text-amber-300 transition-colors">
-                  Cloud Services
+                <a href='/dataAnalytics'>
+                  Data and Network Services</a>
                 </button>
               </li>
             </ul>

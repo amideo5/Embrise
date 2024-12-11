@@ -1,24 +1,24 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+// import { ExternalLink } from 'lucide-react';
 
 const projects = [
   {
     title: 'E-Commerce Platform',
     category: 'Web Development',
-    image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=800',
-    description: 'Modern e-commerce solution with advanced features'
+    image: 'https://plus.unsplash.com/premium_photo-1731087150117-4a9a349996c2?q=80&w=2912&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    description: 'An elegant and modern e-commerce platform designed for perfume enthusiasts, featuring seamless transaction management and an integrated admin panel to track insights and performance.'
   },
   {
-    title: 'Healthcare App',
-    category: 'Mobile Development',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
-    description: 'Patient management system for healthcare providers'
+    title: 'Travel Application',
+    category: 'Web Development',
+    image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+    description: 'A user-friendly travel website that showcases a wide range of tours and provides a convenient way for users to inquire about tour details and information.'
   },
   {
-    title: 'AI Analytics Dashboard',
-    category: 'AI & ML',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
-    description: 'Data visualization and predictive analytics platform'
+    title: 'Transaction Management Application',
+    category: 'Custom Development',
+    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    description: 'A custom desktop application designed to extract transaction details from statements, organize them in a specified format, and generate district-wise monthly reports, which can be easily downloaded for further analysis.'
   }
 ];
 
@@ -42,13 +42,13 @@ export function Portfolio() {
                   alt={project.title}
                   className="w-full h-64 object-cover object-center transform group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-amber-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-amber-900/100 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <p className="text-amber-200 mb-2">{project.description}</p>
-                    <button className="flex items-center space-x-2 text-white hover:text-amber-200 transition-colors">
+                    <p className="text-amber-50 mb-2">{project.description}</p>
+                    {/* <button className="flex items-center space-x-2 text-white hover:text-amber-200 transition-colors">
                       <span>View Project</span>
                       <ExternalLink className="w-4 h-4" />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>

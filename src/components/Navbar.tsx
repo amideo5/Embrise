@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Code2, Menu, X } from 'lucide-react';
+import {Menu, X } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,24 +17,35 @@ export function Navbar() {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+        setIsMobileMenuOpen(false);
+      }, 300); // Adjust timeout as needed for route change animation
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
       setIsMobileMenuOpen(false);
     }
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white' : 'bg-transparent'
-    }`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-transparent'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-2">
-            <Code2 className="w-8 h-8 text-amber-700" />
-            <span className="text-xl font-semibold text-amber-900">Embrise</span>
-          </div>
-
+          <a href="/">
+            <div className="relative items-center space-x-2">
+              
+            <img src="../src/assets/embrise_logo.png" alt="Embrise Logo" className="h-12 w-auto" />
+            </div>
+          </a>
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('services')} className="text-amber-900 hover:text-amber-700 transition-colors">
               Services
@@ -50,7 +64,7 @@ export function Navbar() {
             </button>
           </div>
 
-          <button 
+          <button
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >

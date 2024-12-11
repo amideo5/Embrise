@@ -1,4 +1,4 @@
-import { Code2, Palette, Database, Rocket } from 'lucide-react';
+import { Code2, Palette, Database, Rocket, Brain } from 'lucide-react';
 
 const timelineSteps = [
   {
@@ -22,7 +22,7 @@ const timelineSteps = [
     description: 'Launching your project to production'
   },
   {
-    icon: Rocket,
+    icon: Brain,
     title: 'Branding',
     description: 'Empowering tech solutions with seamless creativity'
   }

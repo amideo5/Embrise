@@ -7,37 +7,43 @@ const services = [
     icon: Code,
     title: 'Custom Development',
     description: 'Tailored software solutions built with cutting-edge technologies',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400'
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400',
+    link: '/customDevelopment'
   },
   {
     icon: Globe,
     title: 'Web Applications',
     description: 'Responsive and scalable web applications that deliver results',
-    image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=400'
+    image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=400',
+    link: '/webDevelopment'
   },
   {
     icon: Database,
-    title: 'Backend Systems',
-    description: 'Robust and secure backend infrastructure for your applications',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=400'
+    title: 'Data and Network Systems',
+    description: 'Robust and secure Networked applications and Data Analytics',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=400',
+    link: '/dataAnalytics'
   },
   {
     icon: Smartphone,
     title: 'Mobile Solutions',
     description: 'Native and cross-platform mobile applications',
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=400'
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=400',
+    link: '/mobileDevelopment'
   },
   {
     icon: Palette,
     title: 'UI/UX Design',
     description: 'Beautiful and intuitive user interfaces that engage',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=400'
+    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=400',
+    link: '/uiuxDesign'
   },
   {
     icon: Cpu,
     title: 'AI Integration',
     description: 'Seamless integration with third-party services and AIs',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=400'
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=400',
+    link: '/aiIntegration'
   }
 ];
 
