@@ -1,0 +1,54 @@
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .carousel-card {
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .carousel-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Default styles for all slides */
+  .carousel-card {
+    transform: scale(0.8);
+    opacity: 0.5;
+    filter: blur(4px);
+  }
+  
+  /* Active slide (center) styles */
+  .carousel-card.active-slide {
+    transform: scale(1.2);
+    opacity: 1;
+    filter: blur(0);
+    z-index: 10;
+  }
+  
+  /* Adjacent slides */
+  .carousel-card.adjacent-slide {
+    transform: scale(0.9);
+    opacity: 0.8;
+    filter: blur(2px);
+  }
+  
+  /* Center Text Styling */
+  .carousel-text {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+  

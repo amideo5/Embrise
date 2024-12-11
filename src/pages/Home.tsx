@@ -9,6 +9,7 @@ import '../styles/animations.css';
 import { Timeline } from '../components/Timeline';
 import { SectionDivider } from '../components/SectionDivider';
 import { Portfolio } from '../components/Portfolio';
+// import BlurParallaxCarousel from '../components/BlurParallaxCarousel.tsx';
 // import Pipeline from '../components/Pipeline';
 
 function Home() {
@@ -22,6 +23,7 @@ function Home() {
           
         </div>
         {/* <Pipeline /> */}
+        {/* <BlurParallaxCarousel /> */}
         <div className="relative">
           <Services />
         </div>

@@ -49,28 +49,28 @@ const CustomSoftwareProcess: React.FC = () => {
                     {
                         title: "1. Understanding Your Needs",
                         description: "We start by learning your business goals, challenges, and vision. This discovery phase ensures we align on expectations and outcomes.",
-                        img: "../src/assets/11.png",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/11.png",
                         alt: "Understanding Needs",
                         reverse: false
                     },
                     {
                         title: "2. Componentizing Your Ideas",
                         description: "We break down your requirements into modular, reusable components. This approach ensures scalability, maintainability, and faster development.",
-                        img: "../src/assets/12.jpg",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/12.jpg",
                         alt: "Componentizing",
                         reverse: true
                     },
                     {
                         title: "3. Agile Development",
                         description: "Using agile methodology, we develop iteratively and prioritize delivering value at every stage. You’ll see tangible progress quickly.",
-                        img: "../src/assets/13.jpg",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/13.jpg",
                         alt: "Agile Development",
                         reverse: false
                     },
                     {
                         title: "4. Meaningful Delivery",
                         description: "Once the solution is built and thoroughly tested, we deliver it with comprehensive documentation and ongoing support to ensure success.",
-                        img: "../src/assets/14.jpg",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/14.jpg",
                         alt: "Delivery",
                         reverse: true
                     }

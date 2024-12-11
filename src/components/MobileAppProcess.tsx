@@ -48,28 +48,28 @@ const MobileAppProcess: React.FC = () => {
                     {
                         title: "1. Ideation and Planning",
                         description: "We work with you to understand your app's vision, audience, and core functionalities. This planning phase ensures a smooth roadmap for development.",
-                        img: "../src/assets/41.webp",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/41.webp",
                         alt: "Ideation and Planning",
                         reverse: false
                     },
                     {
                         title: "2. UI/UX Design",
                         description: "Our design team creates user-friendly interfaces that provide a seamless experience while adhering to your brand identity.",
-                        img: "../src/assets/42.webp",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/42.webp",
                         alt: "UI/UX Design",
                         reverse: true
                     },
                     {
                         title: "3. Development",
                         description: "Using native or cross-platform frameworks (like React Native or Flutter), we build scalable, responsive, and high-performing mobile applications.",
-                        img: "../src/assets/43.jpeg",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/43.jpeg",
                         alt: "Development",
                         reverse: false
                     },
                     {
                         title: "4. Testing and Deployment",
                         description: "Comprehensive testing ensures a bug-free app. Once approved, we deploy your app to app stores and provide ongoing support.",
-                        img: "../src/assets/25.png",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/25.png",
                         alt: "Testing and Deployment",
                         reverse: true
                     }

@@ -49,28 +49,28 @@ const AIIntegrationProcess: React.FC = () => {
                     {
                         title: "1. Problem Analysis and Dataset Preparation",
                         description: "We begin by understanding your business challenge and collecting relevant data. Proper preparation ensures high-quality input for AI models.",
-                        img: "../src/assets/61.jpg",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/61.jpg",
                         alt: "Problem Analysis and Dataset Preparation",
                         reverse: false
                     },
                     {
                         title: "2. Model Development",
                         description: "Our team builds and trains custom AI models using cutting-edge algorithms and frameworks to solve your specific use case.",
-                        img: "../src/assets/62.png",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/62.png",
                         alt: "Model Development",
                         reverse: true
                     },
                     {
                         title: "3. AI Integration",
                         description: "We seamlessly integrate AI models into your existing systems, ensuring compatibility and minimal disruption to workflows.",
-                        img: "../src/assets/63.png",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/63.png",
                         alt: "AI Integration",
                         reverse: false
                     },
                     {
                         title: "4. Monitoring and Improvement",
                         description: "Continuous monitoring ensures optimal performance, and iterative improvements keep the AI system aligned with changing needs.",
-                        img: "../src/assets/64.jpg",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/64.jpg",
                         alt: "Monitoring and Improvement",
                         reverse: true
                     }

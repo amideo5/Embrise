@@ -48,28 +48,28 @@ const UIUXProcess: React.FC = () => {
                     {
                         title: "1. User Research",
                         description: "Understanding user needs and behaviors through interviews, surveys, and data analysis forms the foundation of our design process.",
-                        img: "../src/assets/51.png",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/51.png",
                         alt: "User Research",
                         reverse: false
                     },
                     {
                         title: "2. Wireframing and Prototyping",
                         description: "Low-fidelity wireframes and high-fidelity prototypes give you a clear vision of the product before development begins.",
-                        img: "../src/assets/52.avif",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/52.avif",
                         alt: "Wireframing and Prototyping",
                         reverse: true
                     },
                     {
                         title: "3. Visual Design",
                         description: "Aesthetic interfaces aligned with your branding to captivate and engage users.",
-                        img: "../src/assets/53.webp",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/53.webp",
                         alt: "Visual Design",
                         reverse: false
                     },
                     {
                         title: "4. Usability Testing",
                         description: "Real user feedback ensures our designs meet expectations and deliver an exceptional experience.",
-                        img: "../src/assets/54.svg",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/54.svg",
                         alt: "Usability Testing",
                         reverse: true
                     }

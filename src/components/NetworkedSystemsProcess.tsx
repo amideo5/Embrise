@@ -48,28 +48,28 @@ const NetworkedSystemsProcess: React.FC = () => {
                     {
                         title: "1. System Architecture Design",
                         description: "We design resilient system architectures to ensure high availability, fault tolerance, and scalability for your infrastructure.",
-                        img: "../src/assets/31.jpg",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/31.jpg",
                         alt: "System Architecture Design",
                         reverse: false
                     },
                     {
                         title: "2. Data Collection and Processing",
                         description: "We build pipelines to gather, clean, and transform data into usable formats, ensuring data integrity and quality.",
-                        img: "../src/assets/32.jpg",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/32.jpg",
                         alt: "Data Collection and Processing",
                         reverse: true
                     },
                     {
                         title: "3. Analytics and Reporting",
                         description: "Advanced analytics techniques and custom dashboards provide actionable insights tailored to your business goals.",
-                        img: "../src/assets/33.webp",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/33.webp",
                         alt: "Analytics and Reporting",
                         reverse: false
                     },
                     {
                         title: "4. Optimization and Scaling",
                         description: "Continuous monitoring and optimization keep your systems efficient and ready for growth.",
-                        img: "../src/assets/34.jpeg",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/34.jpeg",
                         alt: "Optimization and Scaling",
                         reverse: true
                     }

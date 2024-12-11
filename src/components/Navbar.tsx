@@ -43,7 +43,7 @@ export function Navbar() {
           <a href="/">
             <div className="relative items-center space-x-2">
               
-            <img src="../src/assets/embrise_logo.png" alt="Embrise Logo" className="h-12 w-auto" />
+            <img src="https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/embrise_logo.png" alt="Embrise Logo" className="h-12 w-auto" />
             </div>
           </a>
           <div className="hidden md:flex items-center space-x-8">
@@ -59,8 +59,8 @@ export function Navbar() {
             <button onClick={() => scrollToSection('contact')} className="text-amber-900 hover:text-amber-700 transition-colors">
               Contact
             </button>
-            <button onClick={() => scrollToSection('contact')} className="bg-amber-800 text-white px-6 py-2 rounded-full hover:bg-amber-900 transition-colors">
-              Get Started
+            <button onClick={() => scrollToSection('blogs')} className="bg-amber-800 text-white px-6 py-2 rounded-full hover:bg-amber-900 transition-colors">
+              Blog
             </button>
           </div>
 

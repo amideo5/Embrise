@@ -48,42 +48,42 @@ const WebProcess: React.FC = () => {
                     {
                         title: "1. Requirement Analysis",
                         description: "We begin by gathering and understanding your business requirements, user expectations, and technical constraints. This step ensures a clear vision for your project.",
-                        img: "../src/assets/11.png",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/11.png",
                         alt: "Requirement Analysis",
                         reverse: false
                     },
                     {
                         title: "2. Design and Prototyping",
                         description: "Our team creates intuitive UI/UX designs and interactive prototypes to visualize the final product. Feedback loops ensure alignment with your vision.",
-                        img: "../src/assets/22.png",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/22.png",
                         alt: "Design and Prototyping",
                         reverse: true
                     },
                     {
                         title: "3. Frontend Development",
                         description: "Using modern technologies like React or Vue.js, we build responsive and dynamic user interfaces optimized for performance and accessibility.",
-                        img: "../src/assets/23.png",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/23.png",
                         alt: "Frontend Development",
                         reverse: false
                     },
                     {
                         title: "4. Backend Development",
                         description: "We develop robust server-side architectures using frameworks like Node.js, Django, or Ruby on Rails. Our focus is on security, scalability, and seamless integration with your systems.",
-                        img: "../src/assets/24.png",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/24.png",
                         alt: "Backend Development",
                         reverse: true
                     },
                     {
                         title: "5. Testing and QA",
                         description: "Rigorous testing ensures functionality, performance, and security. We address any issues to deliver a flawless final product.",
-                        img: "../src/assets/25.png",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/25.png",
                         alt: "Testing and QA",
                         reverse: false
                     },
                     {
                         title: "6. Deployment and Support",
                         description: "We deploy your application to the production environment and provide ongoing maintenance and support to ensure long-term success.",
-                        img: "../src/assets/26.jpg",
+                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/26.jpg",
                         alt: "Deployment",
                         reverse: true
                     }
