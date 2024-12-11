@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import CustomDevelopment from './pages/CustomDevelopment';
 import ScrollToTop from './components/ScrollToTop';
@@ -11,7 +11,7 @@ import AIIntegration from './pages/AIIntegration';
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <Routes>
         {/* Default route */}
@@ -23,7 +23,7 @@ const App: React.FC = () => {
         <Route path="/uiuxDesign" element={<UIUXDesign />} />
         <Route path="/aiIntegration" element={<AIIntegration />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

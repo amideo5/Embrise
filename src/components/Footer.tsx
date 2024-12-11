@@ -1,7 +1,6 @@
 import React from 'react';
-import { Mail, MapPin} from 'lucide-react';
-import { useNavigate, useLocation } from 'react-router-dom';
-
+import { Mail, MapPin } from 'lucide-react';
+import { useNavigate, useLocation, Link } from 'react-router-dom'; // Import Link
 
 export function Footer() {
   const navigate = useNavigate();
@@ -32,10 +31,15 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-            <img src="https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/embrise_logo.png" alt="Embrise Logo" className="h-12 w-auto" />
+              <img
+                src="https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/embrise_logo.png"
+                alt="Embrise Logo"
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-amber-200/80">
-              Transforming ideas into exceptional digital experiences through innovative technology solutions.
+              Transforming ideas into exceptional digital experiences through
+              innovative technology solutions.
             </p>
           </div>
 
@@ -84,26 +88,22 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <button className="hover:text-amber-300 transition-colors">
-                  <a href='/webDevelopment'>
-                  Web Development</a>
+                  <Link to="/webDevelopment">Web Development</Link>
                 </button>
               </li>
               <li>
                 <button className="hover:text-amber-300 transition-colors">
-                <a href='/mobileDevelopment'>
-                  Mobile Apps</a>
+                  <Link to="/mobileDevelopment">Mobile Apps</Link>
                 </button>
               </li>
               <li>
                 <button className="hover:text-amber-300 transition-colors">
-                <a href='/aiIntegration'>
-                  AI & ML Solutions</a>
+                  <Link to="/aiIntegration">AI & ML Solutions</Link>
                 </button>
               </li>
               <li>
                 <button className="hover:text-amber-300 transition-colors">
-                <a href='/dataAnalytics'>
-                  Data and Network Services</a>
+                  <Link to="/dataAnalytics">Data and Network Services</Link>
                 </button>
               </li>
             </ul>
