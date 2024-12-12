@@ -9,7 +9,7 @@ import '../styles/animations.css';
 import { Timeline } from '../components/Timeline';
 import { SectionDivider } from '../components/SectionDivider';
 import { Portfolio } from '../components/Portfolio';
-// import BlurParallaxCarousel from '../components/BlurParallaxCarousel.tsx';
+import BlurParallaxCarousel from '../components/BlurParallaxCarousel.tsx';
 // import Pipeline from '../components/Pipeline';
 
 function Home() {
@@ -18,17 +18,19 @@ function Home() {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <SectionDivider className="bg-transparent border-transparent text-transparent" variant="curve" />
         <div className="flex">
           <Timeline />
-          
         </div>
-        {/* <Pipeline /> */}
-        {/* <BlurParallaxCarousel /> */}
+        <SectionDivider className="bg-transparent border-transparent text-transparent" variant="curve" />
+        <SectionDivider className="bg-transparent border-transparent text-transparent" variant="curve" />
+        <BlurParallaxCarousel />
+        <SectionDivider className="bg-transparent border-transparent text-transparent" variant="curve" />
         <div className="relative">
           <Services />
         </div>
         <div className="relative">
-          <SectionDivider className="text-amber-50" variant="curve" />
+          <SectionDivider className="bg-transparent border-transparent text-transparent" variant="curve" />
           <Portfolio />
         </div>
         <div className="relative">

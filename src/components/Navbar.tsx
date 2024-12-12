@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 export function Navbar() {
@@ -36,16 +36,16 @@ export function Navbar() {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-transparent'
-      }`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-        <Link to="/"> 
+          <Link to="/">
             <div className="relative items-center space-x-2">
-              
-            <img src="https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/embrise_logo.png" alt="Embrise Logo" className="h-12 w-auto" />
+              <img src="https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/embrise_logo.png" alt="Embrise Logo" className="h-12 w-auto" />
             </div>
-            </Link>
+          </Link>
+
+          {/* Hidden Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('services')} className="text-amber-900 hover:text-amber-700 transition-colors">
               Services
@@ -64,8 +64,9 @@ export function Navbar() {
             </button>
           </div>
 
+          {/* Hamburger Icon */}
           <button
-            className="md:hidden"
+            className="md:hidden w-8 h-8 flex items-center justify-center"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -77,7 +78,7 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="px-2 pt-2 pb-3 space-y-1">

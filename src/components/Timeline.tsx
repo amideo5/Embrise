@@ -30,7 +30,7 @@ const timelineSteps = [
 
 export function Timeline() {
   return (
-    <div className="min-h-screen relative flex justify-center items-center px-4">
+    <div className=" relative flex justify-center items-center px-4">
       <div className="flex flex-wrap gap-8 justify-center items-center max-w-full">
         {timelineSteps.map((step, index) => (
           <div

@@ -2,6 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useState } from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom"; // For React Router links (if using React Router)
 import "../styles/Carousel.css"; // Custom styles for parallax and blur effects
 
 const BlurParallaxCarousel = () => {
@@ -11,7 +12,7 @@ const BlurParallaxCarousel = () => {
     dots: false,
     infinite: true,
     speed: 1000,
-    slidesToShow: 3, // Show 3 slides
+    slidesToShow: 3, // Show 3 slides by default
     slidesToScroll: 1,
     centerMode: true, // Enable center mode
     autoplay: true,
@@ -20,25 +21,34 @@ const BlurParallaxCarousel = () => {
     beforeChange: (_oldIndex: number, newIndex: number) => {
       setCurrentIndex(newIndex); // Update the index on change
     },
+    responsive: [
+      {
+        breakpoint: 768, // For smaller screens (mobile)
+        settings: {
+          slidesToShow: 1, // Show 1 slide
+          centerMode: false,
+        },
+      },
+    ],
   };
 
   const images = [
-    { src: "https://via.placeholder.com/800x400", alt: "Slide 1" },
-    { src: "https://via.placeholder.com/800x400", alt: "Slide 2" },
-    { src: "https://via.placeholder.com/800x400", alt: "Slide 3" },
-    { src: "https://via.placeholder.com/800x400", alt: "Slide 4" },
-    { src: "https://via.placeholder.com/800x400", alt: "Slide 5" },
+    { title: "Who needs a website?", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", link: "/whoneedsawebsite" },
+    { title: "How tech integration enhances your business ?", text: "Pellentesque habitant morbi tristique senectus et netus.", link: "/techintegration" },
+    { title: "Where do we come in ?", text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", link: "/wherewecomein" },
+    { title: "Unleash the potential  with max availability", text: "Quisque id diam vel quam elementum pulvinar.", link: "/unleashpotential" },
+    { title: "Create a world of your business", text: "Mauris ultrices eros in cursus turpis massa tincidunt dui ut.", link: "/createbusinessworld" },
+    { title: "What AI can do for your business", text: "Mauris ultrices eros in cursus turpis massa tincidunt dui ut.", link: "/aiforbusiness" },
   ];
 
   return (
-    <div className="carousel-container min-h-screen" id="blogs">
+   
+    <div className="carousel-container" id="blogs">
       <Slider {...settings}>
         {images.map((image, index) => {
-          // Calculate the relative position of each slide
-          // Adjust this logic to make sure the center slide is active
-          const isActive = index === currentIndex; // Active (center) slide
-          const isLeftAdjacent = index === currentIndex - 1 || (currentIndex === 0 && index === images.length - 1); // Left adjacent slide
-          const isRightAdjacent = index === currentIndex + 1 || (currentIndex === images.length - 1 && index === 0); // Right adjacent slide
+          const isActive = index === currentIndex;
+          const isLeftAdjacent = index === currentIndex - 1 || (currentIndex === 0 && index === images.length - 1);
+          const isRightAdjacent = index === currentIndex + 1 || (currentIndex === images.length - 1 && index === 0);
 
           return (
             <div
@@ -51,14 +61,18 @@ const BlurParallaxCarousel = () => {
                   : ""
               }`}
             >
-              <div
-                className="carousel-image"
-                style={{
-                  backgroundImage: `url(${image.src})`,
-                }}
-              >
-                <h2 className="carousel-text">{image.alt}</h2>
-              </div>
+              <Link to={image.link} className="carousel-link">
+                <div className="outer-card">
+                  <div
+                    className="inner-card"
+                  >
+                    <div className="carousel-content">
+                      <h2 className="carousel-title">{image.title}</h2>
+                      <p className="carousel-text">{image.text}</p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
           );
         })}

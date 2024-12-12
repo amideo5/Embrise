@@ -10,7 +10,7 @@ const ArticleComponent2 = () => {
             <br></br><br></br><br></br>
             {/* Article Section */}
             <img
-                src="../src/assets/a2.png"
+                src="https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/a2.png"
                 style={{
                     display: 'block',
                     margin: '0 auto', // Centers the image horizontally

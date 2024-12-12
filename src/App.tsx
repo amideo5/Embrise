@@ -8,6 +8,13 @@ import MobileDevelopment from './pages/MobileDevelopment';
 import DataAnalytics from './pages/DataAnalytics';
 import UIUXDesign from './pages/UIUXDesign';
 import AIIntegration from './pages/AIIntegration';
+import ArticleComponent1 from './pages/ArticleComponent1';
+import ArticleComponent2 from './pages/ArticleComponent2';
+import ArticleComponent3 from './pages/ArticleComponent3';
+import ArticleComponent4 from './pages/ArticleComponent4';
+import ArticleComponent5 from './pages/ArticleComponent5';
+import ArticleComponent6 from './pages/ArticleComponent6';
+
 
 const App: React.FC = () => {
   return (
@@ -22,6 +29,12 @@ const App: React.FC = () => {
         <Route path="/dataAnalytics" element={<DataAnalytics />} />
         <Route path="/uiuxDesign" element={<UIUXDesign />} />
         <Route path="/aiIntegration" element={<AIIntegration />} />
+        <Route path="/whoneedsawebsite" element={<ArticleComponent1 />} />
+        <Route path="/techintegration" element={<ArticleComponent2 />} />
+        <Route path="/wherewecomein" element={<ArticleComponent3 />} />
+        <Route path="/unleashpotential" element={<ArticleComponent4 />} />
+        <Route path="/createbusinessworld" element={<ArticleComponent5 />} />
+        <Route path="/aiforbusiness" element={<ArticleComponent6 />} />
       </Routes>
     </HashRouter>
   );
