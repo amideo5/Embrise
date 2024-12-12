@@ -33,13 +33,13 @@ const BlurParallaxCarousel = () => {
   };
 
   const images = [
-    { title: "Who needs a website?", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", link: "/whoneedsawebsite" },
-    { title: "How tech integration enhances your business ?", text: "Pellentesque habitant morbi tristique senectus et netus.", link: "/techintegration" },
-    { title: "Where do we come in ?", text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", link: "/wherewecomein" },
-    { title: "Unleash the potential  with max availability", text: "Quisque id diam vel quam elementum pulvinar.", link: "/unleashpotential" },
-    { title: "Create a world of your business", text: "Mauris ultrices eros in cursus turpis massa tincidunt dui ut.", link: "/createbusinessworld" },
-    { title: "What AI can do for your business", text: "Mauris ultrices eros in cursus turpis massa tincidunt dui ut.", link: "/aiforbusiness" },
-  ];
+    { title: "Who needs a website?", text: "Discover why having a website is essential in today's digital era.", link: "/whoneedsawebsite" },
+    { title: "How tech integration enhances your business ?", text: "Explore how technology can streamline processes and drive growth.", link: "/techintegration" },
+    { title: "Where do we come in ?", text: "Learn about our role in helping you achieve your business goals.", link: "/wherewecomein" },
+    { title: "Unleash the potential with max availability", text: "Ensure your business operates at its peak, 24/7.", link: "/unleashpotential" },
+    { title: "Create a world of your business", text: "Build a unique digital presence tailored to your brand.", link: "/createbusinessworld" },
+    { title: "What AI can do for your business", text: "Harness the power of AI to optimize and innovate your operations.", link: "/aiforbusiness" },
+];
 
   return (
    
