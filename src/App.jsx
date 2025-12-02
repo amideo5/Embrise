@@ -16,7 +16,7 @@ import ArticleComponent5 from './pages/ArticleComponent5';
 import ArticleComponent6 from './pages/ArticleComponent6';
 
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <HashRouter>
       <ScrollToTop />
