@@ -1,0 +1,157 @@
+.carousel-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel-card {
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.carousel-link {
+  display: block; /* Ensure the link covers the whole card */
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Inherit text color */
+}
+
+.outer-card {
+  background-color: #FFECB3;
+
+  border-radius: 10px;
+  padding-top: 70px;
+  padding-left: 20px;
+  padding-bottom: 70px;
+  padding-right: 20px;
+  border-radius: 30px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.inner-card {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  /* background: rgb(146 64 14); */
+  background: rgb(154,123,79);
+background: linear-gradient(294deg, rgba(154,123,79,1) 0%, rgba(146,64,14,1) 100%);
+  height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+}
+
+.carousel-content {
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;  /* Stack children vertically */
+  justify-content: space-between;  /* Push title to the top and text to the bottom */
+  height: 100%;  /* Ensure the container takes up the full height */
+}
+
+.carousel-title {
+  font-size: 24px;
+  font-weight: bold;
+  /* margin-right: 2px; */
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); */
+  margin-bottom: 5px;  /* Optional: Add some space between the title and the text */
+  color: bisque;
+}
+
+.carousel-text {
+  font-size: 16px;
+  line-height: 1.4;
+  max-height: 4.4em; /* Limiting text to 3 lines (roughly 1.4em per line) */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: blanchedalmond;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); */
+}
+
+
+.carousel-card {
+  transform: scale(0.8);
+  opacity: 0.5;
+  filter: blur(4px);
+}
+
+.carousel-card.active-slide {
+  transform: scale(0.95);
+  opacity: 1;
+  filter: blur(0);
+  z-index: 10;
+}
+
+.carousel-card.adjacent-slide {
+  transform: scale(0.9);
+  opacity: 0.8;
+  filter: blur(2px);
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    width: 100%;
+  }
+}
+
+.red-card {
+  background-color: #FFC18C; /* Bright red background */
+  color: white; /* White text */
+  border-radius: 10px; /* Rounded corners */
+  width: 300px; /* Fixed width for all cards */
+  height: 280px; /* Fixed height for all cards */
+  padding: 20px; /* Add padding */
+  text-align: center; /* Center-align the content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  transition: transform 0.3s ease;
+  margin: auto; /* Ensure centering */
+}
+
+.red-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.icon {
+  font-size: 50px; /* Larger size for the icon */
+  margin-bottom: 10px; /* Space below the icon */
+}
+
+.carousel-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.carousel-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+}
+
+.carousel-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center; /* Align cards in the center */
+}
+
+.slick-list {
+  overflow: hidden; /* Ensure no overflow issues */
+}
+
+.slick-track {
+  display: flex;
+}
