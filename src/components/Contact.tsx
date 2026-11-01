@@ -3,7 +3,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import { ArrowUpRight, Mail, MapPin, Send } from 'lucide-react';
 
 export function Contact() {
-  const [state, handleSubmit] = useForm('xbljepkq');
+  const [state, handleSubmit] = useForm('xbggzeqz');
 
   if (state.succeeded) {
     return (
