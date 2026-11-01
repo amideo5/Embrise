@@ -21,7 +21,7 @@ export function HeroStats() {
           label: 'Projects Completed'
         }
       ].map((stat, index) => (
-        <div 
+        <div
           key={index}
           className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group"
         >

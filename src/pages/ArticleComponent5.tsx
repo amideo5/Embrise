@@ -1,18 +1,19 @@
 import React from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import RelatedServices from "../components/RelatedServices";
 
 const ArticleComponent5 = () => {
     return (
         <div className="article-page">
             {/* Navbar */}
             <Navbar />
-            
+
             {/* Article Section */}
             <img
                 className="article-page__cover"
-                alt="Embrise article cover"
-                src="https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/a5.png"
+                alt="Illustration about LAN-based business applications"
+                src="/assets/a5.png"
                 style={{
                     display: 'block',
                     margin: '0 auto', // Centers the image horizontally
@@ -20,6 +21,8 @@ const ArticleComponent5 = () => {
                     height: '30%', // Height will scale automatically to maintain the aspect ratio
                     objectFit: 'cover' // Ensures the image doesn't stretch disproportionately
                 }}
+                loading="eager"
+                decoding="async"
             />
 
             <main className="flex-grow px-4 py-8 md:px-20 lg:px-40">
@@ -77,6 +80,8 @@ const ArticleComponent5 = () => {
                     </p>
                 </article>
             </main>
+
+            <RelatedServices topic="lan" />
 
             {/* Footer */}
             <Footer />

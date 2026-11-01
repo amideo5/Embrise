@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 const WebProcess: React.FC = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    
+
     const scrollToSection = (id: string) => {
         if (location.pathname !== '/') {
             navigate('/');
@@ -34,10 +34,10 @@ const WebProcess: React.FC = () => {
                 className="service-process__intro"
             >
                 <h1 className="text-4xl font-bold mb-4">
-                    Our Full-Stack Web Development Process
+                    Website and Web Application Development
                 </h1>
                 <p className="text-lg">
-                    At Embrise, we craft robust and scalable full-stack solutions tailored to your business needs.
+                    We design and build responsive websites and web applications, from the user-facing experience through backend functionality, testing and launch.
                 </p>
             </motion.div>
 
@@ -47,42 +47,42 @@ const WebProcess: React.FC = () => {
                     {
                         title: "1. Requirement Analysis",
                         description: "We begin by gathering and understanding your business requirements, user expectations, and technical constraints. This step ensures a clear vision for your project.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/11.png",
+                        img: "/assets/11.png",
                         alt: "Requirement Analysis",
                         reverse: false
                     },
                     {
                         title: "2. Design and Prototyping",
                         description: "Our team creates intuitive UI/UX designs and interactive prototypes to visualize the final product. Feedback loops ensure alignment with your vision.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/22.png",
+                        img: "/assets/22.png",
                         alt: "Design and Prototyping",
                         reverse: true
                     },
                     {
                         title: "3. Frontend Development",
                         description: "Using modern technologies like React or Vue.js, we build responsive and dynamic user interfaces optimized for performance and accessibility.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/23.png",
+                        img: "/assets/23.png",
                         alt: "Frontend Development",
                         reverse: false
                     },
                     {
                         title: "4. Backend Development",
                         description: "We develop robust server-side architectures using frameworks like Node.js, Django, or Ruby on Rails. Our focus is on security, scalability, and seamless integration with your systems.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/24.png",
+                        img: "/assets/24.png",
                         alt: "Backend Development",
                         reverse: true
                     },
                     {
                         title: "5. Testing and QA",
-                        description: "Rigorous testing ensures functionality, performance, and security. We address any issues to deliver a flawless final product.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/25.png",
+                        description: "We test functionality, performance and security-related requirements, then address issues before the application is released.",
+                        img: "/assets/25.png",
                         alt: "Testing and QA",
                         reverse: false
                     },
                     {
                         title: "6. Deployment and Support",
                         description: "We deploy your application to the production environment and provide ongoing maintenance and support to ensure long-term success.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/26.jpg",
+                        img: "/assets/26.jpg",
                         alt: "Deployment",
                         reverse: true
                     }
@@ -120,7 +120,7 @@ const WebProcess: React.FC = () => {
                     Ready to turn your vision into reality with a dependable full-stack team? Let’s get started.
                 </p>
                 <a
-                    href="#"
+                    href="/#contact"
                     onClick={(e) => {
                         e.preventDefault(); // Prevent the default behavior of link
                         scrollToSection('contact')

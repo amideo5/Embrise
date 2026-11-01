@@ -1,0 +1,136 @@
+{
+  "siteUrl": "https://embrise.in",
+  "siteName": "Embrise Solutions",
+  "defaultImage": "https://embrise.in/assets/embrise_logo.png",
+  "organization": {
+    "name": "Embrise Solutions",
+    "url": "https://embrise.in",
+    "email": "admin@embrise.in",
+    "logo": "https://embrise.in/assets/embrise_logo.png"
+  },
+  "pages": [
+    {
+      "path": "/",
+      "title": "Custom Software, Web & Mobile App Development | Embrise",
+      "description": "Embrise Solutions designs and builds custom software, business websites, web and mobile apps, UI/UX experiences and practical AI integrations.",
+      "headline": "Custom software, websites and digital products built around your business",
+      "kind": "home",
+      "image": "https://embrise.in/assets/embrise_logo.png",
+      "aliases": []
+    },
+    {
+      "path": "/services/custom-software-development",
+      "title": "Custom Software Development for Businesses | Embrise",
+      "description": "Custom software development built around your workflows. Embrise plans, designs and develops tailored business applications and integrations.",
+      "headline": "Custom software development",
+      "serviceType": "Custom software development",
+      "kind": "service",
+      "image": "https://embrise.in/assets/11.png",
+      "aliases": ["/customDevelopment"]
+    },
+    {
+      "path": "/services/web-development",
+      "title": "Website & Web Application Development | Embrise",
+      "description": "Responsive websites and scalable web applications designed to make your business easier to find, use and manage.",
+      "headline": "Website and web application development",
+      "serviceType": "Website and web application development",
+      "kind": "service",
+      "image": "https://embrise.in/assets/22.png",
+      "aliases": ["/webDevelopment"]
+    },
+    {
+      "path": "/services/mobile-app-development",
+      "title": "Mobile App Development for Android & iOS | Embrise",
+      "description": "Plan and build user-focused mobile apps, from product structure and interface design to development, testing and launch.",
+      "headline": "Mobile app development",
+      "serviceType": "Mobile app development",
+      "kind": "service",
+      "image": "https://embrise.in/assets/41.webp",
+      "aliases": ["/mobileDevelopment"]
+    },
+    {
+      "path": "/services/data-analytics-network-solutions",
+      "title": "Data Analytics & Network Solutions | Embrise",
+      "description": "Connect business systems and turn operational data into clearer reporting, useful insights and more informed decisions.",
+      "headline": "Data analytics and network solutions",
+      "serviceType": "Data analytics and network solutions",
+      "kind": "service",
+      "image": "https://embrise.in/assets/31.jpg",
+      "aliases": ["/dataAnalytics"]
+    },
+    {
+      "path": "/services/ui-ux-design",
+      "title": "UI/UX Design for Websites & Apps | Embrise",
+      "description": "User-focused UI/UX design for websites and apps, including research, information architecture, wireframes, prototypes and interface design.",
+      "headline": "UI/UX design for websites and apps",
+      "serviceType": "User interface and user experience design",
+      "kind": "service",
+      "image": "https://embrise.in/assets/51.png",
+      "aliases": ["/uiuxDesign"]
+    },
+    {
+      "path": "/services/ai-integration",
+      "title": "AI Integration & Business Automation | Embrise",
+      "description": "Practical AI integration for business workflows, data extraction, automation and customer experiences, shaped around real operational needs.",
+      "headline": "AI integration for business",
+      "serviceType": "Artificial intelligence integration and workflow automation",
+      "kind": "service",
+      "image": "https://embrise.in/assets/61.jpg",
+      "aliases": ["/aiIntegration"]
+    },
+    {
+      "path": "/insights/who-needs-a-website",
+      "title": "Who Needs a Website? | Embrise Insights",
+      "description": "Explore why startups, small businesses, retailers, service providers and organisations benefit from a useful, professional website.",
+      "headline": "Who Needs a Website?",
+      "kind": "article",
+      "image": "https://embrise.in/assets/a1.png",
+      "aliases": ["/whoneedsawebsite"]
+    },
+    {
+      "path": "/insights/how-tech-integration-enhances-your-business",
+      "title": "How Tech Integration Enhances Your Business | Embrise",
+      "description": "Learn how connected business technology, software tools and integrated systems can support smoother operations and better customer experiences.",
+      "headline": "How Tech Integration Enhances Your Business",
+      "kind": "article",
+      "image": "https://embrise.in/assets/a2.png",
+      "aliases": ["/techintegration"]
+    },
+    {
+      "path": "/insights/where-do-we-come-in",
+      "title": "Where Do We Come In? | Embrise Insights",
+      "description": "See how a technology partner can help clarify business needs, plan a digital solution and guide the process from idea to delivery.",
+      "headline": "Where Do We Come In?",
+      "kind": "article",
+      "image": "https://embrise.in/assets/a3.png",
+      "aliases": ["/wherewecomein"]
+    },
+    {
+      "path": "/insights/business-availability-and-reliability",
+      "title": "Building Business Availability & System Reliability | Embrise",
+      "description": "Understand how application design, network planning and monitoring contribute to more available and reliable business systems.",
+      "headline": "Unleash the Potential with Max Availability",
+      "kind": "article",
+      "image": "https://embrise.in/assets/a4.png",
+      "aliases": ["/unleashpotential"]
+    },
+    {
+      "path": "/insights/lan-based-business-applications",
+      "title": "LAN-Based Business Applications: Uses & Benefits | Embrise",
+      "description": "Explore how local network applications can support connected workflows, timely information and customer experiences in places such as restaurants and events.",
+      "headline": "Create a World of Your Business with LAN-Based Applications",
+      "kind": "article",
+      "image": "https://embrise.in/assets/a5.png",
+      "aliases": ["/createbusinessworld"]
+    },
+    {
+      "path": "/insights/what-ai-can-do-for-your-business",
+      "title": "What AI Can Do for Your Business | Embrise Insights",
+      "description": "Discover practical business uses of AI, from data extraction and analysis to automation, pattern detection and more relevant customer interactions.",
+      "headline": "What AI Can Do for Your Business",
+      "kind": "article",
+      "image": "https://embrise.in/assets/a6.png",
+      "aliases": ["/aiforbusiness"]
+    }
+  ]
+}

@@ -14,12 +14,12 @@ const BlurParallaxCarousel = () => {
   };
 
   const articles = [
-    { icon: "◉", title: "Who needs a website?", text: "Discover why a thoughtful digital presence matters in today’s connected world.", link: "/whoneedsawebsite", label: 'Digital presence' },
-    { icon: "⌘", title: "Technology that works together", text: "Explore how connected tools can simplify processes and support growth.", link: "/techintegration", label: 'Integration' },
-    { icon: "↗", title: "Where do we come in?", text: "Learn how the right technology partner can help turn your goals into progress.", link: "/wherewecomein", label: 'Partnership' },
-    { icon: "◷", title: "Build for better availability", text: "See how dependable systems can help keep your business moving.", link: "/unleashpotential", label: 'Reliability' },
-    { icon: "▧", title: "Create a world for your business", text: "Build a digital experience shaped around your brand and your customers.", link: "/createbusinessworld", label: 'Experience' },
-    { icon: "✳", title: "What AI can do for business", text: "Understand practical ways AI can help teams work smarter.", link: "/aiforbusiness", label: 'Artificial intelligence' },
+    { icon: "◉", title: "Who Needs a Website?", text: "Discover why a thoughtful digital presence matters in today’s connected world.", link: "/insights/who-needs-a-website", label: 'Digital presence' },
+    { icon: "⌘", title: "How Tech Integration Enhances Your Business", text: "Explore how connected tools and integrated systems can support smoother business operations.", link: "/insights/how-tech-integration-enhances-your-business", label: 'Integration' },
+    { icon: "↗", title: "Where Do We Come In?", text: "Learn how the right technology partner can help turn your goals into progress.", link: "/insights/where-do-we-come-in", label: 'Partnership' },
+    { icon: "◷", title: "Unleash the Potential with Max Availability", text: "Learn why application reliability, network planning and system availability matter to business operations.", link: "/insights/business-availability-and-reliability", label: 'Reliability' },
+    { icon: "▧", title: "Create a World of Your Business with LAN-Based Applications", text: "Explore how local network applications can support connected experiences in restaurants and events.", link: "/insights/lan-based-business-applications", label: 'Experience' },
+    { icon: "✳", title: "What AI Can Do for Your Business", text: "Discover practical uses of AI for business data, insights, automation and customer interactions.", link: "/insights/what-ai-can-do-for-your-business", label: 'Artificial intelligence' },
   ];
 
   return (

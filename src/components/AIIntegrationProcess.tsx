@@ -35,10 +35,10 @@ const AIIntegrationProcess: React.FC = () => {
                 className="service-process__intro"
             >
                 <h1 className="text-4xl font-bold mb-4">
-                    Our AI Integration and Analysis Process
+                    AI Integration for Business
                 </h1>
                 <p className="text-lg">
-                    Empowering your business with AI-driven insights and automation for smarter decision-making.
+                    We assess business workflows and integrate practical AI capabilities for data extraction, analysis and automation.
                 </p>
             </motion.div>
 
@@ -48,28 +48,28 @@ const AIIntegrationProcess: React.FC = () => {
                     {
                         title: "1. Problem Analysis and Dataset Preparation",
                         description: "We begin by understanding your business challenge and collecting relevant data. Proper preparation ensures high-quality input for AI models.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/61.jpg",
+                        img: "/assets/61.jpg",
                         alt: "Problem Analysis and Dataset Preparation",
                         reverse: false
                     },
                     {
                         title: "2. Model Development",
                         description: "Our team builds and trains custom AI models using cutting-edge algorithms and frameworks to solve your specific use case.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/62.png",
+                        img: "/assets/62.png",
                         alt: "Model Development",
                         reverse: true
                     },
                     {
                         title: "3. AI Integration",
                         description: "We seamlessly integrate AI models into your existing systems, ensuring compatibility and minimal disruption to workflows.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/63.png",
+                        img: "/assets/63.png",
                         alt: "AI Integration",
                         reverse: false
                     },
                     {
                         title: "4. Monitoring and Improvement",
                         description: "Continuous monitoring ensures optimal performance, and iterative improvements keep the AI system aligned with changing needs.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/64.jpg",
+                        img: "/assets/64.jpg",
                         alt: "Monitoring and Improvement",
                         reverse: true
                     }
@@ -107,7 +107,7 @@ const AIIntegrationProcess: React.FC = () => {
                     Ready to integrate AI into your business? Let's get started.
                 </p>
                 <a
-                    href="#"
+                    href="/#contact"
                     onClick={(e) => {
                         e.preventDefault();
                         scrollToSection('contact');

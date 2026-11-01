@@ -34,10 +34,10 @@ const NetworkedSystemsProcess: React.FC = () => {
                 className="service-process__intro"
             >
                 <h1 className="text-4xl font-bold mb-4">
-                    Our Networked Systems and Data Analytics Process
+                    Data Analytics and Network Systems
                 </h1>
                 <p className="text-lg">
-                    Building scalable and robust systems with actionable insights from data.
+                    We design networked systems, data pipelines and reporting tools that turn operational data into useful insights.
                 </p>
             </motion.div>
 
@@ -47,28 +47,28 @@ const NetworkedSystemsProcess: React.FC = () => {
                     {
                         title: "1. System Architecture Design",
                         description: "We design resilient system architectures to ensure high availability, fault tolerance, and scalability for your infrastructure.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/31.jpg",
+                        img: "/assets/31.jpg",
                         alt: "System Architecture Design",
                         reverse: false
                     },
                     {
                         title: "2. Data Collection and Processing",
                         description: "We build pipelines to gather, clean, and transform data into usable formats, ensuring data integrity and quality.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/32.jpg",
+                        img: "/assets/32.jpg",
                         alt: "Data Collection and Processing",
                         reverse: true
                     },
                     {
                         title: "3. Analytics and Reporting",
                         description: "Advanced analytics techniques and custom dashboards provide actionable insights tailored to your business goals.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/33.webp",
+                        img: "/assets/33.webp",
                         alt: "Analytics and Reporting",
                         reverse: false
                     },
                     {
                         title: "4. Optimization and Scaling",
                         description: "Continuous monitoring and optimization keep your systems efficient and ready for growth.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/34.jpeg",
+                        img: "/assets/34.jpeg",
                         alt: "Optimization and Scaling",
                         reverse: true
                     }
@@ -106,7 +106,7 @@ const NetworkedSystemsProcess: React.FC = () => {
                     Ready to build scalable systems with actionable insights? Let’s get started.
                 </p>
                 <a
-                    href="#"
+                    href="/#contact"
                     onClick={(e) => {
                         e.preventDefault();
                         scrollToSection('contact');

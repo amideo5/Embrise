@@ -34,10 +34,10 @@ const UIUXProcess: React.FC = () => {
                 className="service-process__intro"
             >
                 <h1 className="text-4xl font-bold mb-4">
-                    Our UI/UX Design Process
+                    UI/UX Design for Websites and Apps
                 </h1>
                 <p className="text-lg">
-                    Creating delightful and intuitive experiences that resonate with your users.
+                    We research, structure and design intuitive website and app experiences—from wireframes and prototypes to usable interfaces.
                 </p>
             </motion.div>
 
@@ -47,28 +47,28 @@ const UIUXProcess: React.FC = () => {
                     {
                         title: "1. User Research",
                         description: "Understanding user needs and behaviors through interviews, surveys, and data analysis forms the foundation of our design process.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/51.png",
+                        img: "/assets/51.png",
                         alt: "User Research",
                         reverse: false
                     },
                     {
                         title: "2. Wireframing and Prototyping",
                         description: "Low-fidelity wireframes and high-fidelity prototypes give you a clear vision of the product before development begins.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/52.avif",
+                        img: "/assets/52.avif",
                         alt: "Wireframing and Prototyping",
                         reverse: true
                     },
                     {
                         title: "3. Visual Design",
                         description: "Aesthetic interfaces aligned with your branding to captivate and engage users.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/53.webp",
+                        img: "/assets/53.webp",
                         alt: "Visual Design",
                         reverse: false
                     },
                     {
                         title: "4. Usability Testing",
                         description: "Real user feedback ensures our designs meet expectations and deliver an exceptional experience.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/54.svg",
+                        img: "/assets/54.svg",
                         alt: "Usability Testing",
                         reverse: true
                     }
@@ -106,7 +106,7 @@ const UIUXProcess: React.FC = () => {
                     Ready to create stunning designs? Let’s bring your vision to life.
                 </p>
                 <a
-                    href="#"
+                    href="/#contact"
                     onClick={(e) => {
                         e.preventDefault();
                         scrollToSection('contact');

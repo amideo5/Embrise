@@ -34,10 +34,10 @@ const MobileAppProcess: React.FC = () => {
                 className="service-process__intro"
             >
                 <h1 className="text-4xl font-bold mb-4">
-                    Our Mobile App Development Process
+                    Mobile App Development for Your Business
                 </h1>
                 <p className="text-lg">
-                    From concept to deployment, we build sleek and performant mobile apps tailored to your goals.
+                    We plan and build native and cross-platform mobile apps with user-focused interfaces, thorough testing and release support.
                 </p>
             </motion.div>
 
@@ -47,28 +47,28 @@ const MobileAppProcess: React.FC = () => {
                     {
                         title: "1. Ideation and Planning",
                         description: "We work with you to understand your app's vision, audience, and core functionalities. This planning phase ensures a smooth roadmap for development.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/41.webp",
+                        img: "/assets/41.webp",
                         alt: "Ideation and Planning",
                         reverse: false
                     },
                     {
                         title: "2. UI/UX Design",
                         description: "Our design team creates user-friendly interfaces that provide a seamless experience while adhering to your brand identity.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/42.webp",
+                        img: "/assets/42.webp",
                         alt: "UI/UX Design",
                         reverse: true
                     },
                     {
                         title: "3. Development",
                         description: "Using native or cross-platform frameworks (like React Native or Flutter), we build scalable, responsive, and high-performing mobile applications.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/43.jpeg",
+                        img: "/assets/43.jpeg",
                         alt: "Development",
                         reverse: false
                     },
                     {
                         title: "4. Testing and Deployment",
-                        description: "Comprehensive testing ensures a bug-free app. Once approved, we deploy your app to app stores and provide ongoing support.",
-                        img: "https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/25.png",
+                        description: "We test the app across relevant devices and usage scenarios before release, then support the deployment process and ongoing improvements.",
+                        img: "/assets/25.png",
                         alt: "Testing and Deployment",
                         reverse: true
                     }
@@ -106,7 +106,7 @@ const MobileAppProcess: React.FC = () => {
                     Ready to build a high-performing mobile app? Let’s bring your ideas to life.
                 </p>
                 <a
-                    href="#"
+                    href="/#contact"
                     onClick={(e) => {
                         e.preventDefault();
                         scrollToSection('contact');

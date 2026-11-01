@@ -13,8 +13,8 @@ export function Hero() {
         <div className="hero-layout">
           <div className="hero-copy">
             <div className="eyebrow"><span className="eyebrow__line" /> Technology with intention</div>
-            <h1>Build what’s next.<br /><em>Make it matter.</em></h1>
-            <p className="hero-lede">We turn ambitious ideas into thoughtful digital products, dependable software and experiences people love to use.</p>
+            <h1>Custom software &amp; digital products.<br /><em>Built around your business.</em></h1>
+            <p className="hero-lede">Embrise Solutions designs and develops custom software, business websites, web and mobile apps, user-focused UI/UX and practical AI integrations. We bring strategy, design and engineering together to solve real business needs.</p>
             <div className="hero-actions">
               <button className="button button--primary" onClick={() => scrollToSection('contact')}>Start a conversation <ArrowRight size={17} /></button>
               <button className="button button--text" onClick={() => scrollToSection('work')}>Explore our work <ArrowDown size={16} /></button>
