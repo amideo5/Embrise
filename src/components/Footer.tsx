@@ -1,138 +1,25 @@
 import React from 'react';
-import { Mail, MapPin } from 'lucide-react';
-import { useNavigate, useLocation, Link } from 'react-router-dom'; // Import Link
+import { ArrowUpRight, Mail } from 'lucide-react';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
+import logo from '../assets/mono.png';
 
 export function Footer() {
   const navigate = useNavigate();
   const location = useLocation();
   const scrollToSection = (id: string) => {
-    if (location.pathname !== '/') {
-      navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-        // setIsMobileMenuOpen(false);
-      }, 300); // Adjust timeout as needed for route change animation
-    } else {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-      // setIsMobileMenuOpen(false);
-    }
+    const scroll = () => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') { navigate('/'); window.setTimeout(scroll, 350); } else scroll();
   };
 
   return (
-    <footer className="bg-amber-900 text-amber-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <img
-                src="https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/embrise_logo.png"
-                alt="Embrise Logo"
-                className="h-12 w-auto"
-              />
-            </div>
-            <p className="text-amber-200/80">
-              Transforming ideas into exceptional digital experiences through
-              innovative technology solutions.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <button
-                  onClick={() => scrollToSection('services')}
-                  className="hover:text-amber-300 transition-colors"
-                >
-                  Services
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection('about')}
-                  className="hover:text-amber-300 transition-colors"
-                >
-                  About Us
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection('work')}
-                  className="hover:text-amber-300 transition-colors"
-                >
-                  Our Work
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="hover:text-amber-300 transition-colors"
-                >
-                  Contact
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <button className="hover:text-amber-300 transition-colors">
-                  <Link to="/webDevelopment">Web Development</Link>
-                </button>
-              </li>
-              <li>
-                <button className="hover:text-amber-300 transition-colors">
-                  <Link to="/mobileDevelopment">Mobile Apps</Link>
-                </button>
-              </li>
-              <li>
-                <button className="hover:text-amber-300 transition-colors">
-                  <Link to="/aiIntegration">AI & ML Solutions</Link>
-                </button>
-              </li>
-              <li>
-                <button className="hover:text-amber-300 transition-colors">
-                  <Link to="/dataAnalytics">Data and Network Services</Link>
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-amber-400" />
-              <span>admin@embrise.in</span>
-            </div>
-            {/* <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-amber-400" />
-              <span>+1 (555) 123-4567</span>
-            </div> */}
-            <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-amber-400" />
-              <span>India</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-amber-800">
-          <p className="text-center text-amber-300/60">
-            © {new Date().getFullYear()} Embrise. All rights reserved.
-          </p>
-        </div>
+    <footer className="site-footer">
+      <div className="site-footer__main">
+        <div className="site-footer__brand"><Link to="/" className="footer-brand"><img src={logo} alt="" /><span>EMBRISE<span>.</span></span></Link><p>Thoughtful technology.<br />Digital experiences that move business forward.</p><a href="mailto:admin@embrise.in" className="footer-email"><Mail size={16} /> admin@embrise.in <ArrowUpRight size={15} /></a></div>
+        <div className="site-footer__column"><h3>Explore</h3><button onClick={() => scrollToSection('services')}>Services</button><button onClick={() => scrollToSection('work')}>Our work</button><button onClick={() => scrollToSection('about')}>About</button><button onClick={() => scrollToSection('blogs')}>Insights</button></div>
+        <div className="site-footer__column"><h3>What we do</h3><Link to="/webDevelopment">Web development</Link><Link to="/mobileDevelopment">Mobile solutions</Link><Link to="/aiIntegration">AI integration</Link><Link to="/dataAnalytics">Data & network systems</Link><Link to="/uiuxDesign">UI/UX design</Link><Link to="/customDevelopment">Custom software</Link></div>
+        <div className="site-footer__note"><span>HAVE A CHALLENGE?</span><h3>Let’s make<br />something useful.</h3><button onClick={() => scrollToSection('contact')}>Start a conversation <ArrowUpRight size={17} /></button></div>
       </div>
+      <div className="site-footer__bottom"><span>© {new Date().getFullYear()} Embrise Solutions. All rights reserved.</span><span>Made with intent <b>✳</b></span></div>
     </footer>
   );
 }

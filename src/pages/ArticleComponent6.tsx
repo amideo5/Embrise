@@ -4,12 +4,14 @@ import { Footer } from "../components/Footer";
 
 const ArticleComponent6 = () => {
     return (
-        <div className="bg-gray-50 min-h-screen flex flex-col">
+        <div className="article-page">
             {/* Navbar */}
             <Navbar />
-            <br></br><br></br>
+            
             {/* Article Section */}
             <img
+                className="article-page__cover"
+                alt="Embrise article cover"
                 src="https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/a6.png"
                 style={{
                     display: 'block',
@@ -26,7 +28,7 @@ const ArticleComponent6 = () => {
                         What AI Can Do for Your Business
                     </h1>
                     <p className="text-lg leading-relaxed mb-4">
-                        Artificial Intelligence (AI) is no longer a futuristic concept; it is a transformative tool that businesses are leveraging today to achieve remarkable efficiency and growth. At Embrise Tech, we harness the power of AI to enable efficient data extraction, transformation, and actionable insights that cater to a diverse customer domain.
+                        Artificial Intelligence (AI) is no longer a futuristic concept; it is a transformative tool that businesses are leveraging today to achieve remarkable efficiency and growth. At Embrise, we harness the power of AI to enable efficient data extraction, transformation, and actionable insights that cater to a diverse customer domain.
                     </p>
                     <h2 className="text-3xl font-semibold mt-8 mb-4">
                         Efficient Data Extraction and Transformation
@@ -59,13 +61,13 @@ const ArticleComponent6 = () => {
                         AI-powered automation reduces the burden of repetitive tasks, allowing your team to focus on strategic initiatives. Whether it’s streamlining supply chains, managing inventories, or optimizing customer service, AI drives efficiency across all facets of your business.
                     </p>
                     <h2 className="text-3xl font-semibold mt-8 mb-4">
-                        Embrise Tech: Your AI Partner
+                        Embrise: Your AI Partner
                     </h2>
                     <p className="text-lg leading-relaxed mb-4">
-                        At Embrise Tech, we specialize in integrating AI solutions that make your business smarter, faster, and more customer-centric. Our expertise lies in tailoring AI tools to your specific needs, ensuring you extract maximum value from your data while delivering unparalleled service to your clients.
+                        At Embrise, we specialize in integrating AI solutions that make your business smarter, faster, and more customer-centric. Our expertise lies in tailoring AI tools to your specific needs, ensuring you extract maximum value from your data while helping your team deliver more relevant and timely service to clients.
                     </p>
                     <p className="text-lg leading-relaxed mb-4">
-                        AI is not just a tool; it’s a catalyst for transformation. Let’s unlock the potential of AI together and elevate your business to new heights. Contact Embrise Tech today to discover how AI can revolutionize your operations and customer engagement.
+                        AI is not just a tool; it’s a catalyst for transformation. Let’s unlock the potential of AI together and elevate your business to new heights. Contact Embrise today to discover how AI can revolutionize your operations and customer engagement.
                     </p>
                 </article>
             </main>

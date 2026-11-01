@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
+import logo from '../assets/mono.png';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,106 +10,68 @@ export function Navbar() {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 18);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => setIsMobileMenuOpen(false), [location.pathname]);
+
   const scrollToSection = (id: string) => {
+    const scroll = () => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     if (location.pathname !== '/') {
       navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-        setIsMobileMenuOpen(false);
-      }, 300); // Adjust timeout as needed for route change animation
+      window.setTimeout(scroll, 350);
     } else {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-      setIsMobileMenuOpen(false);
+      scroll();
     }
+    setIsMobileMenuOpen(false);
   };
 
+  const navItems = [
+    { label: 'Services', id: 'services' },
+    { label: 'Our work', id: 'work' },
+    { label: 'About', id: 'about' },
+    { label: 'Insights', id: 'blogs' },
+  ];
+
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/">
-            <div className="relative items-center space-x-2">
-              <img src="https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/embrise_logo.png" alt="Embrise Logo" className="h-12 w-auto" />
-            </div>
-          </Link>
+    <header className={`site-header ${isScrolled ? 'site-header--scrolled' : ''}`}>
+      <nav className="site-nav" aria-label="Main navigation">
+        <Link to="/" className="site-brand" aria-label="Embrise home">
+          <img src={logo} alt="Embrise" />
+          <span>EMBRISE<span className="site-brand__dot">.</span></span>
+        </Link>
 
-          {/* Hidden Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('services')} className="text-amber-900 hover:text-amber-700 transition-colors">
-              Services
-            </button>
-            <button onClick={() => scrollToSection('work')} className="text-amber-900 hover:text-amber-700 transition-colors">
-              Our Work
-            </button>
-            <button onClick={() => scrollToSection('about')} className="text-amber-900 hover:text-amber-700 transition-colors">
-              About
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="text-amber-900 hover:text-amber-700 transition-colors">
-              Contact
-            </button>
-            <button onClick={() => scrollToSection('blogs')} className="bg-amber-800 text-white px-6 py-2 rounded-full hover:bg-amber-900 transition-colors">
-              Blog
-            </button>
-          </div>
-
-          {/* Hamburger Icon */}
-          <button
-            className="md:hidden w-8 h-8 flex items-center justify-center"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-amber-900" />
-            ) : (
-              <Menu className="w-6 h-6 text-amber-900" />
-            )}
-          </button>
+        <div className="site-nav__links">
+          {navItems.map((item) => (
+            <button key={item.id} onClick={() => scrollToSection(item.id)}>{item.label}</button>
+          ))}
         </div>
-      </div>
 
-      {/* Mobile Menu */}
+        <button className="site-nav__cta" onClick={() => scrollToSection('contact')}>
+          Let’s talk <ArrowUpRight size={16} />
+        </button>
+
+        <button
+          className="site-nav__toggle"
+          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isMobileMenuOpen}
+          onClick={() => setIsMobileMenuOpen((open) => !open)}
+        >
+          {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+      </nav>
+
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            <button
-              onClick={() => scrollToSection('services')}
-              className="block w-full text-left px-3 py-2 text-amber-900 hover:bg-amber-50 rounded-md"
-            >
-              Services
-            </button>
-            <button
-              onClick={() => scrollToSection('work')}
-              className="block w-full text-left px-3 py-2 text-amber-900 hover:bg-amber-50 rounded-md"
-            >
-              Our Work
-            </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="block w-full text-left px-3 py-2 text-amber-900 hover:bg-amber-50 rounded-md"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="block w-full text-left px-3 py-2 text-amber-900 hover:bg-amber-50 rounded-md"
-            >
-              Contact
-            </button>
-          </div>
+        <div className="site-mobile-menu">
+          {navItems.map((item) => (
+            <button key={item.id} onClick={() => scrollToSection(item.id)}>{item.label}</button>
+          ))}
+          <button className="site-mobile-menu__cta" onClick={() => scrollToSection('contact')}>Let’s talk <ArrowUpRight size={16} /></button>
         </div>
       )}
-    </nav>
+    </header>
   );
 }

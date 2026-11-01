@@ -4,12 +4,14 @@ import { Footer } from "../components/Footer";
 
 const ArticleComponent2 = () => {
     return (
-        <div className="bg-gray-50 min-h-screen flex flex-col">
+        <div className="article-page">
             {/* Navbar */}
             <Navbar />
-            <br></br><br></br><br></br>
+            
             {/* Article Section */}
             <img
+                className="article-page__cover"
+                alt="Embrise article cover"
                 src="https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/a2.png"
                 style={{
                     display: 'block',
@@ -26,7 +28,7 @@ const ArticleComponent2 = () => {
                         How Tech Integration Enhances Your Business
                     </h1>
                     <p className="text-lg leading-relaxed mb-4">
-                        In an era where technology drives every industry forward, integrating the right tech solutions into your business can be the key to unlocking new opportunities and achieving unparalleled growth. At Embrise Tech, we specialize in providing innovative tech solutions for a diverse spectrum of clients, tailored to meet unique business needs and challenges.
+                        In an era where technology drives every industry forward, integrating the right tech solutions into your business can be the key to unlocking new opportunities and supporting sustainable growth. At Embrise, we specialize in providing innovative tech solutions for a diverse spectrum of clients, tailored to meet unique business needs and challenges.
                     </p>
                     <h2 className="text-3xl font-semibold mt-8 mb-4">
                         Automating Tasks for Enhanced Efficiency
@@ -62,10 +64,10 @@ const ArticleComponent2 = () => {
                         Let’s Transform Your Business Together
                     </h2>
                     <p className="text-lg leading-relaxed mb-4">
-                        At Embrise Tech, we believe that every business has the potential to thrive with the right technology and automation. By integrating cutting-edge, automated solutions into your operations, we help you unlock new possibilities, enhance customer experiences, and achieve your goals.
+                        At Embrise, we believe that every business has the potential to thrive with the right technology and automation. By integrating cutting-edge, automated solutions into your operations, we help you unlock new possibilities, enhance customer experiences, and achieve your goals.
                     </p>
                     <p className="text-lg leading-relaxed mb-4">
-                        Don’t just keep up with the competition—outpace them. Embrace the power of tech integration and automation with Embrise Tech. Contact us today to explore how we can transform your business for the future.
+                        Don’t just keep up with the competition—outpace them. Embrace the power of tech integration and automation with Embrise. Contact us today to explore how we can transform your business for the future.
                     </p>
                 </article>
             </main>

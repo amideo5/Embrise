@@ -4,12 +4,14 @@ import { Footer } from "../components/Footer";
 
 const ArticleComponent1 = () => {
     return (
-        <div className="bg-gray-50 min-h-screen flex flex-col">
+        <div className="article-page">
             {/* Navbar */}
             <Navbar />
-            <br></br><br></br>
+            
             {/* Article Section */}
             <img
+                className="article-page__cover"
+                alt="Embrise article cover"
                 src="https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/a1.png"
                 style={{
                     display: 'block',

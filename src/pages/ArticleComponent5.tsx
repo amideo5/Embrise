@@ -4,12 +4,14 @@ import { Footer } from "../components/Footer";
 
 const ArticleComponent5 = () => {
     return (
-        <div className="bg-gray-50 min-h-screen flex flex-col">
+        <div className="article-page">
             {/* Navbar */}
             <Navbar />
-            <br></br><br></br><br></br>
+            
             {/* Article Section */}
             <img
+                className="article-page__cover"
+                alt="Embrise article cover"
                 src="https://raw.githubusercontent.com/amideo5/Embrise/main/src/assets/a5.png"
                 style={{
                     display: 'block',
@@ -26,7 +28,7 @@ const ArticleComponent5 = () => {
                         Create a World of Your Business with LAN-Based Applications
                     </h1>
                     <p className="text-lg leading-relaxed mb-4">
-                        In the dynamic environments of restaurants, events, and other closed spaces, having a dedicated and secure information system is not just a convenience—it’s a game-changer. Embrise Tech’s LAN-based applications bring your business closer to your customers, delivering precision, speed, and insights right where you need them.
+                        In the dynamic environments of restaurants, events, and other closed spaces, having a dedicated and secure information system is not just a convenience—it’s a game-changer. Embrise’s LAN-based applications bring your business closer to your customers, delivering precision, speed, and insights right where you need them.
                     </p>
                     <h2 className="text-3xl font-semibold mt-8 mb-4">
                         Transforming Business with LAN-Based Applications
@@ -62,16 +64,16 @@ const ArticleComponent5 = () => {
                         Why LAN-Based Applications Are a Must-Have
                     </h2>
                     <p className="text-lg leading-relaxed mb-4">
-                        Operating on a closed network offers unparalleled speed, security, and reliability. Unlike cloud-dependent solutions, LAN-based systems work efficiently without internet constraints, ensuring your business operations never skip a beat. For restaurants, events, and other businesses requiring precision and privacy, this is the ideal solution.
+                        Operating on a closed network can offer low-latency access, greater control over local data and continued access to key workflows when an internet connection is unreliable. The right setup depends on your environment, devices and security requirements, making LAN-based systems a useful option for restaurants, events and other connected spaces.
                     </p>
                     <h2 className="text-3xl font-semibold mt-8 mb-4">
-                        Ship Your Business to New Heights with Embrise Tech
+                        Take Your Business Further with Embrise
                     </h2>
                     <p className="text-lg leading-relaxed mb-4">
-                        At Embrise Tech, we specialize in crafting solutions that integrate seamlessly into your business operations. Our LAN-based applications are tailored to meet your specific needs, delivering value where it matters most.
+                        At Embrise, we specialize in crafting solutions that integrate seamlessly into your business operations. Our LAN-based applications are tailored to meet your specific needs, delivering value where it matters most.
                     </p>
                     <p className="text-lg leading-relaxed mb-4">
-                        Step into the future of business with technology that enhances efficiency, customer satisfaction, and profitability—all within your secure network. Let’s build a world where your business thrives in every moment. Contact Embrise Tech today to get started.
+                        Step into the future of business with technology that enhances efficiency, customer satisfaction, and profitability—all within your secure network. Let’s build a world where your business thrives in every moment. Contact Embrise today to get started.
                     </p>
                 </article>
             </main>

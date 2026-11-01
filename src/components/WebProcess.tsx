@@ -24,15 +24,14 @@ const WebProcess: React.FC = () => {
     };
 
     return (
-        <div className="bg-gray-50 text-gray-900 min-h-screen px-6 py-12">
-            <br /><br /><br />
+        <div className="service-process">
 
             {/* Header Section */}
             <motion.div
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="max-w-4xl mx-auto text-center"
+                className="service-process__intro"
             >
                 <h1 className="text-4xl font-bold mb-4">
                     Our Full-Stack Web Development Process
@@ -43,7 +42,7 @@ const WebProcess: React.FC = () => {
             </motion.div>
 
             {/* Step-by-Step Process */}
-            <div className="mt-12 space-y-12 max-w-5xl mx-auto">
+            <div className="service-process__steps">
                 {[
                     {
                         title: "1. Requirement Analysis",
@@ -93,16 +92,16 @@ const WebProcess: React.FC = () => {
                         initial={{ opacity: 0, x: step.reverse ? 50 : -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 * index }}
-                        className={`flex flex-col md:flex-row items-center gap-6 ${step.reverse ? 'md:flex-row-reverse' : ''}`}
+                        className={`service-process__step flex flex-col md:flex-row items-center gap-6 ${step.reverse ? 'md:flex-row-reverse' : ''}`}
                     >
                         <div className="flex-1">
                             <img
                                 src={step.img}
                                 alt={step.alt}
-                                className="w-full max-h-64 object-contain rounded-lg shadow-lg"
+                                className="service-process__image w-full max-h-64 object-contain rounded-lg shadow-lg"
                             />
                         </div>
-                        <div className="flex-1 text-center md:text-left">
+                        <div className="service-process__copy flex-1 text-center md:text-left">
                             <h2 className="text-2xl font-semibold mb-2">{step.title}</h2>
                             <p>{step.description}</p>
                         </div>
@@ -115,7 +114,7 @@ const WebProcess: React.FC = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.4 }}
-                className="text-center mt-16"
+                className="service-process__cta text-center mt-16"
             >
                 <p className="text-lg mb-4">
                     Ready to turn your vision into reality with a dependable full-stack team? Let’s get started.
@@ -126,7 +125,7 @@ const WebProcess: React.FC = () => {
                         e.preventDefault(); // Prevent the default behavior of link
                         scrollToSection('contact')
                     }}
-                    className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow-lg hover:bg-gray-800 transition"
+                    className="button button--primary service-process__button"
                 >
                     Contact Us
                 </a>

@@ -1,50 +1,44 @@
-import React, { useState} from 'react';
+import React from 'react';
+import { ArrowDown, ArrowRight, Sparkles } from 'lucide-react';
 import { HeroContent } from './HeroContent';
-import { BackgroundGear } from './BackgroundGear';
 
 export function Hero() {
-
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  if(isMobileMenuOpen){
-    console.log("Yes");
-  }
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
-  };
+  const scrollToSection = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-amber-50 via-amber-100/30 to-white pt-16">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1604933762021-54a5858c9832?auto=format&fit=crop&q=80')] opacity-5 bg-fixed"></div>
-      <BackgroundGear />
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-amber-900 mb-6 animate-fade-in">
-            Transform Your Ideas Into
-            <span className="text-amber-600"> Digital Reality</span>
-          </h1>
-          <p className="text-xl text-amber-700 mb-8 animate-fade-in-delay">
-            We craft exceptional digital experiences that drive growth and innovation
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up-delay">
-            <button onClick={() => scrollToSection('contact')} className="px-8 py-4 bg-amber-600 text-white rounded-full hover:bg-amber-700 transition-colors shadow-lg hover:shadow-xl">
-              Start Your Project
-            </button>
-            <button onClick={() => scrollToSection('work')} className="px-8 py-4 bg-white text-amber-600 rounded-full hover:bg-amber-50 transition-colors shadow-lg hover:shadow-xl border border-amber-200">
-              View Our Work
-            </button>
+    <>
+      <section className="hero-section">
+        <div className="hero-orbit hero-orbit--one" />
+        <div className="hero-orbit hero-orbit--two" />
+        <div className="hero-layout">
+          <div className="hero-copy">
+            <div className="eyebrow"><span className="eyebrow__line" /> Technology with intention</div>
+            <h1>Build what’s next.<br /><em>Make it matter.</em></h1>
+            <p className="hero-lede">We turn ambitious ideas into thoughtful digital products, dependable software and experiences people love to use.</p>
+            <div className="hero-actions">
+              <button className="button button--primary" onClick={() => scrollToSection('contact')}>Start a conversation <ArrowRight size={17} /></button>
+              <button className="button button--text" onClick={() => scrollToSection('work')}>Explore our work <ArrowDown size={16} /></button>
+            </div>
+            <div className="hero-note"><Sparkles size={15} /> Strategy, design and engineering under one roof.</div>
+          </div>
+
+          <div className="hero-visual" aria-label="Embrise digital product design and development illustration">
+            <div className="hero-visual__topline"><span>IDEAS → IMPACT</span><span>01 / 03</span></div>
+            <div className="hero-visual__canvas">
+              <div className="visual-orbit visual-orbit--outer" />
+              <div className="visual-orbit visual-orbit--inner" />
+              <div className="visual-core"><span>e</span></div>
+              <div className="visual-node visual-node--design"><span className="visual-node__dot" />DESIGN</div>
+              <div className="visual-node visual-node--build"><span className="visual-node__dot" />BUILD</div>
+              <div className="visual-node visual-node--launch"><span className="visual-node__dot" />GROW</div>
+              <div className="visual-caption">From a first sketch<br />to what comes next.</div>
+            </div>
+            <div className="hero-visual__footer"><span>EMBRISE / DIGITAL STUDIO</span><span>EST. FOR WHAT’S NEXT</span></div>
           </div>
         </div>
-        <div style={{ marginBottom: -80 }}></div>
-
-
-        <HeroContent />
-      </div>
-    </div>
+        <div className="hero-bottomline"><span>Scroll to explore</span><span className="hero-bottomline__rule" /><span>01 — 04</span></div>
+      </section>
+      <HeroContent />
+    </>
   );
 }
